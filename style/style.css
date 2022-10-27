@@ -1,0 +1,90 @@
+html {
+  /* direction: rtl; */
+  @font-face {
+    font-family: "vazir";
+    src: url("../assets/font/vazir.eot"),
+      url("../assets/font/vazir.woff2") format("woff2"),
+      url("../assets/font/vazir.woff") format("woff"),
+      url("../assets/font/vazir.ttf") format("truetype");
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "varir";
+  height: 100vh;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.accordion {
+  width: 600px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.accordion .accor-title {
+  width: 100%;
+  padding: 5px 10px;
+  background-color: crimson;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.accordion .accor-title.active {
+  color: #fff;
+}
+
+.accordion .accor-title::before {
+  content: "+";
+  padding-right: 9px;
+}
+.accordion .accor-title.active::before {
+  content: "-";
+  padding-right: 13px;
+  color: #fff;
+  padding-bottom: 5px;
+}
+
+.accordion .accor-content {
+  width: 100%;
+  background-color: #fff;
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+
+.accordion .accor-content.active {
+  height: 130px;
+}
+
+.accordion .accor-content p {
+  padding: 10px;
+}
